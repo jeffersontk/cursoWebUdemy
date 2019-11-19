@@ -2,7 +2,7 @@ Number.prototype.entre = function(inicio, fim){
     return this >=inicio && this <= fim
 }
 
-const imprirResultado = function(nota){
+const imprimirResultado = function(nota){
     if(nota.entre(9, 10)){
         console.log('quadro de ouro');
     }else if(nota.entre(7, 8.99)){
@@ -16,9 +16,9 @@ const imprirResultado = function(nota){
     }
 }
 
-imprirResultado(10)
-imprirResultado(8)
-imprirResultado(6)
-imprirResultado(3)
-imprirResultado(-1)
-imprirResultado(11)
+imprimirResultado(10)
+imprimirResultado(8)
+imprimirResultado(6)
+imprimirResultado(3)
+imprimirResultado(-1)
+imprimirResultado(11)
