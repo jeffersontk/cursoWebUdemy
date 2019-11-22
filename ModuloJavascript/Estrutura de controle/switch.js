@@ -1,3 +1,4 @@
+//Estrutura de Controle Switch
 const imprimirResultado = function(nota){
     switch(Math.ceil(nota)){
         case 10:
@@ -15,6 +16,7 @@ const imprimirResultado = function(nota){
             break
         default:
             console.log('não é valido');
+    }
 }
 imprimirResultado(10)
 imprimirResultado(7.5)

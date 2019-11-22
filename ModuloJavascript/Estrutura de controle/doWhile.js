@@ -1,4 +1,4 @@
-//Estrutura de Controle While
+//Estrutura de Controle doWhile
 
 // função onde gera um numero elatorio de acordo com a margem definida 
 function gerarNumeroAleatorio(min, max){
@@ -10,10 +10,12 @@ function gerarNumeroAleatorio(min, max){
 
 let opcao = 0
 
-//loop onde o teste é realixado no começo do bloco, ate que a contição seja aceita
+// o do while ele executa o codigo pelo menos uma vez antes da condição
+// ou seja, o teste condicional é feito no final do bloco
 
-while(opcao != -1){
+do{
+
     opcao = gerarNumeroAleatorio(-1, 10)
     console.log('numero sortiado é ' + opcao);
- 
-}
+
+}while(opcao != -1)
