@@ -1,3 +1,4 @@
+//criando uma função Entre como protoType para definir se o numero esta na faixa definida
 Number.prototype.entre = function(inicio, fim){
     return this >=inicio && this <= fim
 }
