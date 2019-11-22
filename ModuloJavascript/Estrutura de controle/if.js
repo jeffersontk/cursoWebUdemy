@@ -1,3 +1,5 @@
+//Estrutura de Controle IF
+
 function aprovado (nota){
     if(nota >= 7){ //maior ou igual
         console.log("aprovado com " + nota);

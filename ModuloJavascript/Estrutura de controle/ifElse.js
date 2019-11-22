@@ -1,3 +1,5 @@
+//Estrutura de Controle if else
+
 function aprovado (nota){
     //criando uma condição if, caso nota seja maior ou igual a condição é true
     if(nota >= 7){ //maior ou igual
