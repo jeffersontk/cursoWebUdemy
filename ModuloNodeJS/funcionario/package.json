@@ -2,8 +2,10 @@
   "name": "funcionario",
   "version": "1.0.0",
   "description": "exercicio de nodejs",
-  "main": "index.js",
+  "main": "funcionario.js",
   "scripts": {
+    "start": "nodemon",
+    "dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
