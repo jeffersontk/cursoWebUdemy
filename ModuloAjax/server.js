@@ -26,4 +26,11 @@ app.post('/upload', (req, res) => {
     })
 })
 
+app.post('/formulario', (req, res) => {
+    res.send({
+        ...req.body,
+        id: 1
+    })
+})
+
 app.listen(8800, () => console.log('Executando em http://localhost:8800'))
