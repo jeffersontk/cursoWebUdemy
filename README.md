@@ -1,5 +1,5 @@
 # cursoWebUdemy
-repositório do Curso Web Moderno com JavaScript 2019 COMPLETO + Projetos
+Curso Web Moderno com JavaScript 2019 COMPLETO + Projetos
 
 
 Tudo que vc precisa saber para construir aplicações modernas para Web
@@ -40,6 +40,6 @@ Use Node JS e desenvolva usando Javascript no backend
 
 Acesse os principais bancos de dados usando Javascript e Node
 
-Aprenda a construir builds profissionais com Gulp e Webpack
+Aprenda a construir builds profissionais com Webpack
 
 
