@@ -1,11 +1,11 @@
 <template>
   <div class="door-area">
-    <div class="door-frame" :class="{selected: selected && !open}">
+    <div class="door-frame" :class="{selected}">
       <Gift v-if="open && hasGift" />
     </div>
     <div class="door" :class="{open}" @click="selected = !selected">
       <div class="number">{{number}}</div>
-      <div class="knob" @click.stop="open = true"></div>
+      <div class="knob" @click="open = true"></div>
     </div>
   </div>
 </template>
