@@ -1,0 +1,44 @@
+db.estados.aggregate([
+    {$project: {nome: 1, "cidades.nome":1, _id: 0}}
+])
+
+db.estados.aggregate([
+    {$project: {populacao: {$sum: "$cidades.populacao"}, sigla:1, _id:0} },
+    {$group: {_id: null, populacaoTotal: {$sum: "$populacao"}} },
+])
+
+db.estados.aggregate([
+    {$match: {"cidades.nome": "Sorocaba"}},
+    {$unwind: "$cidades"},
+    {$match: {"cidades.nome": "Sorocaba"}},
+]).pretty()
+
+
+db.empresas.aggregate([
+    {$match:{nome:"Bradex"}},
+    {$lookup:{
+        from:"estados",
+        localField:"estadoId",
+        foreignField: "_id",
+        as: "estado"
+    }},
+    {$unwind: "$estado"}
+]).pretty()
+
+db.empresas.aggregate([
+    {$match:{nome: "Piraty"}},
+    {$lookup:{
+        from:"estados",
+        localField:"cidadeId",
+        foreignField:"cidades._id",
+        as: "estado"
+    }},
+    {$unwind: "$estado"},
+    {$unwind: "$estado.cidades"},
+    {$addFields: {mesmaCidade: {$cmp: ["$estado.cidades._id", "$cidadeId"]}}},
+{$match: {mesmaCidade: 0}},
+    
+]).pretty()
+
+
+    {$match: {"estado.cidades.cidades._id": "$cidadeId"}}
